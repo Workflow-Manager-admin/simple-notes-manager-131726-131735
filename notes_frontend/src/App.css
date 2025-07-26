@@ -1,0 +1,55 @@
+:root {
+  --primary: #1976d2;
+  --secondary: #424242;
+  --accent: #ffb300;
+  --sidebar-bg: #f4f6fa;
+  --main-bg: #fff;
+  --border: #ececec;
+  --text: #222;
+  --placeholder: #aaa;
+}
+
+/* Global reset and body settings */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  background: var(--sidebar-bg);
+  color: var(--text);
+  font-family: 'Inter', -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  height: 100%;
+}
+.NotesAppRoot {
+  width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+input, textarea, button {
+  font-family: inherit;
+  outline: none;
+  box-sizing: border-box;
+}
+::-webkit-input-placeholder { color: var(--placeholder);}
+::-moz-placeholder { color: var(--placeholder);}
+:-ms-input-placeholder { color: var(--placeholder);}
+::placeholder { color: var(--placeholder); }
+.sidebar {
+  background: var(--sidebar-bg);
+}
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+a:hover { color: var(--accent); }
+@media (max-width: 900px) {
+  .NotesAppRoot { flex-direction: column !important; }
+}
+@media (max-width: 650px) {
+  .NotesAppRoot aside { 
+    max-width: none !important;
+    flex-basis: 48vw !important;
+    min-width: 0!important;
+  }
+  .NotesAppRoot main {
+    padding: 0 !important;
+  }
+}
